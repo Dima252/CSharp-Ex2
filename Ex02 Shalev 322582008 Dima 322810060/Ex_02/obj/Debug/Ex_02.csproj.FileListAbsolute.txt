@@ -1,0 +1,9 @@
+C:\Users\user\source\repos\CSharp-Ex2\Ex02 Shalev 322582008 Dima 322810060\Ex_02\bin\Debug\Ex_02.exe.config
+C:\Users\user\source\repos\CSharp-Ex2\Ex02 Shalev 322582008 Dima 322810060\Ex_02\bin\Debug\Ex_02.exe
+C:\Users\user\source\repos\CSharp-Ex2\Ex02 Shalev 322582008 Dima 322810060\Ex_02\bin\Debug\Ex_02.pdb
+C:\Users\user\source\repos\CSharp-Ex2\Ex02 Shalev 322582008 Dima 322810060\Ex_02\bin\Debug\Ex02.ConsoleUtils.dll
+C:\Users\user\source\repos\CSharp-Ex2\Ex02 Shalev 322582008 Dima 322810060\Ex_02\obj\Debug\Ex_02.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\CSharp-Ex2\Ex02 Shalev 322582008 Dima 322810060\Ex_02\obj\Debug\Ex_02.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\CSharp-Ex2\Ex02 Shalev 322582008 Dima 322810060\Ex_02\obj\Debug\Ex_02.csproj.Up2Date
+C:\Users\user\source\repos\CSharp-Ex2\Ex02 Shalev 322582008 Dima 322810060\Ex_02\obj\Debug\Ex_02.exe
+C:\Users\user\source\repos\CSharp-Ex2\Ex02 Shalev 322582008 Dima 322810060\Ex_02\obj\Debug\Ex_02.pdb
