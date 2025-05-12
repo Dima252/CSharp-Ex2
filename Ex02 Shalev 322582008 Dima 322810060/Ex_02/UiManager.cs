@@ -66,41 +66,31 @@ namespace Ex_02
 
         public bool IsValidWord(string i_WordFromUser)
         {
-            bool isValid = true;
-            int[] countEachAppearance = new int[8];
-            string WordFromUserToUpper = i_WordFromUser.ToUpper();
-
-            // Check if the word is exactly 4 characters long and contains only letters A-H
             if (i_WordFromUser.Length != 4)
             {
-                isValid = false;
+                return false;
             }
-            else
+
+            int[] countEachAppearance = new int[8];
+            string wordInUpperCase = i_WordFromUser.ToUpper();
+
+            foreach (char character in wordInUpperCase)
             {
-                // Check if the word contains only letters A-H
-                foreach (char character in WordFromUserToUpper)
+                if (character < 'A' || character > 'H')
                 {
-                    countEachAppearance[character - 'A']++; // Increment the count for the corresponding letter
-
-                    if (character < 'A' || character > 'H')
-                    {
-                        isValid = false;
-                        break;
-                    }
-                }
-                // Check if any letter appears more than once 
-                for (int i = 0; i < countEachAppearance.Length; i++)
-                {
-                    if (countEachAppearance[i] > 1)
-                    {
-                        isValid = false;
-                        break;
-                    }
+                    return false; // invalid character
                 }
 
+                int index = character - 'A';
+                countEachAppearance[index]++;
+
+                if (countEachAppearance[index] > 1)
+                {
+                    return false; // duplicate character
+                }
             }
 
-            return isValid;
+            return true;
         }
 
         public int GetGuessesNumber()

@@ -3,15 +3,15 @@
   "WorkspaceRootPath": "C:\\Users\\user\\source\\repos\\CSharp-Ex2\\Ex02 Shalev 322582008 Dima 322810060\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{EEE59F34-05D2-4509-9C6C-BA81CA7739D6}|Ex_02\\Ex_02.csproj|C:\\Users\\user\\source\\repos\\CSharp-Ex2\\Ex02 Shalev 322582008 Dima 322810060\\ex_02\\gameengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEE59F34-05D2-4509-9C6C-BA81CA7739D6}|Ex_02\\Ex_02.csproj|solutionrelative:ex_02\\gameengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{EEE59F34-05D2-4509-9C6C-BA81CA7739D6}|Ex_02\\Ex_02.csproj|c:\\users\\user\\source\\repos\\csharp-ex2\\ex02 shalev 322582008 dima 322810060\\ex_02\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EEE59F34-05D2-4509-9C6C-BA81CA7739D6}|Ex_02\\Ex_02.csproj|solutionrelative:ex_02\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EEE59F34-05D2-4509-9C6C-BA81CA7739D6}|Ex_02\\Ex_02.csproj|c:\\users\\user\\source\\repos\\csharp-ex2\\ex02 shalev 322582008 dima 322810060\\ex_02\\gameengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EEE59F34-05D2-4509-9C6C-BA81CA7739D6}|Ex_02\\Ex_02.csproj|solutionrelative:ex_02\\gameengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EEE59F34-05D2-4509-9C6C-BA81CA7739D6}|Ex_02\\Ex_02.csproj|c:\\users\\user\\source\\repos\\csharp-ex2\\ex02 shalev 322582008 dima 322810060\\ex_02\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EEE59F34-05D2-4509-9C6C-BA81CA7739D6}|Ex_02\\Ex_02.csproj|C:\\Users\\user\\source\\repos\\CSharp-Ex2\\Ex02 Shalev 322582008 Dima 322810060\\ex_02\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EEE59F34-05D2-4509-9C6C-BA81CA7739D6}|Ex_02\\Ex_02.csproj|solutionrelative:ex_02\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -22,30 +22,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "UiManager.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CSharp-Ex2\\Ex02 Shalev 322582008 Dima 322810060\\Ex_02\\UiManager.cs",
               "RelativeDocumentMoniker": "Ex_02\\UiManager.cs",
               "ToolTip": "C:\\Users\\user\\source\\repos\\CSharp-Ex2\\Ex02 Shalev 322582008 Dima 322810060\\Ex_02\\UiManager.cs",
               "RelativeToolTip": "Ex_02\\UiManager.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAcwFYAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAIwDYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-12T14:27:59.493Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "GameEngine.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CSharp-Ex2\\Ex02 Shalev 322582008 Dima 322810060\\Ex_02\\GameEngine.cs",
               "RelativeDocumentMoniker": "Ex_02\\GameEngine.cs",
               "ToolTip": "C:\\Users\\user\\source\\repos\\CSharp-Ex2\\Ex02 Shalev 322582008 Dima 322810060\\Ex_02\\GameEngine.cs",
               "RelativeToolTip": "Ex_02\\GameEngine.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAgwEoAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAswCwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-12T14:24:43.599Z",
               "EditorCaption": ""
@@ -60,8 +60,7 @@
               "RelativeToolTip": "Ex_02\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T14:19:57.389Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-12T14:19:57.389Z"
             }
           ]
         }

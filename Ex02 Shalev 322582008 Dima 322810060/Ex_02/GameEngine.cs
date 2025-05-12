@@ -46,33 +46,42 @@ namespace Ex_02
             int correctLettersInTheRightSpace = 0;
             int existingLetters = 0;
 
-            foreach (char letter in i_InputByUser)
-            {
-                if (m_GuessedWord.Contains(letter) && (m_GuessedWord[letter - 'A'] != i_InputByUser[letter - 'A']))
-                {
-                    existingLetters++;
-                }
-            }
+            string guess = i_InputByUser.ToUpper();
+            string secret = m_GuessedWord.ToUpper();
 
-            for (int i = 0; i < i_InputByUser.Length; i++)
+            bool[] guessUsed = new bool[4];
+            bool[] secretUsed = new bool[4];
+
+            // First pass: correct letters in correct positions
+            for (int i = 0; i < 4; i++)
             {
-                if (m_GuessedWord[i] == i_InputByUser[i])
+                if (guess[i] == secret[i])
                 {
                     correctLettersInTheRightSpace++;
+                    guessUsed[i] = true;
+                    secretUsed[i] = true;
                 }
             }
 
-            while(correctLettersInTheRightSpace > 0)
+            // Second pass: correct letters in wrong positions
+            for (int i = 0; i < 4; i++)
             {
-                result += "V";
-                correctLettersInTheRightSpace--;
+                if (guessUsed[i]) continue;
+
+                for (int j = 0; j < 4; j++)
+                {
+                    if (!secretUsed[j] && guess[i] == secret[j])
+                    {
+                        existingLetters++;
+                        secretUsed[j] = true;
+                        break;
+                    }
+                }
             }
 
-            while (existingLetters > 0)
-            {
-                result += "X";
-                existingLetters--;
-            }
+            // Build result string
+            result = new string('V', correctLettersInTheRightSpace) +
+                     new string('X', existingLetters);
 
             return result;
         }
