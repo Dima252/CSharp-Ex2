@@ -10,87 +10,88 @@ namespace Ex_02
 {
     public class UiManager
     {
-        public int NumberOfGuesses { get; set; } // Number of guesses the user wants to have
-        private const int LetterCount = 8; // Number of letters in the word (A-H)
+        private int m_NumberOfGuesses;
 
-        public UiManager() // Constructor
+        public UiManager()
         {
-            NumberOfGuesses = GetGuessesNumber();
+            m_NumberOfGuesses = GetGuessesNumber();
+        }
+        public int GetNumberOfGuesses()
+        {
+            return m_NumberOfGuesses;
+        }
+        public void SetNumberOfGuesses(int numberOfGuesses)
+        {
+            m_NumberOfGuesses = numberOfGuesses;
         }
 
-        public void GameLoop()
+        public void quitGame()
         {
-            while (true)
-            {
-                GameEngine gameEngine = new GameEngine();
-                string Results = string.Empty;
-
-                PrintResult(Results, string.Empty, 0); // Print the initial empty board
-
-                for (int i = 0; i < NumberOfGuesses; i++)
-                {
-                    string userInput = Console.ReadLine();
-
-                    if (WordIsQuit(userInput) == true)
-                    {
-                        Console.WriteLine("Goodbye!");
-                        break;
-                    }
-
-                    if (IsValidWord(userInput) == true)
-                    {
-                        Results = gameEngine.CalculateResult(userInput);
-                        PrintResult(Results, userInput, i); // Print the current guess and result
-                    }
-                    else
-                    {
-                        Console.WriteLine("Invalid input. Please enter a valid word.");
-                        i--; // Decrement the counter to allow for another guess
-                    }
-
-                }
-
-            }
-          
+            Console.WriteLine("Goodbye!");
         }
 
-        public bool WordIsQuit(string i_WordFromUser)
+        public void PrintGame(Result i_Result, Guess i_WordFromUser, int i_NumberOfIteration, bool i_printEmptyBoard)
         {
-            bool isQuit = false;
-            if (i_WordFromUser.ToUpper() == "Q")
-            {
-                isQuit = true;
-            }
-            return isQuit;
-        }
 
-        public bool IsValidWord(string i_WordFromUser)
-        {
-            if (i_WordFromUser.Length != 4)
+            string Result = "";
+            string WordFromUser = "";
+
+            if (i_printEmptyBoard != true)
             {
-                return false;
+                Result = i_Result.ResultValue;
+                WordFromUser = i_WordFromUser.GuessValue;
             }
 
-            int[] countEachAppearance = new int[8];
-            string wordInUpperCase = i_WordFromUser.ToUpper();
+            Ex02.ConsoleUtils.Screen.Clear();
 
-            foreach (char character in wordInUpperCase)
+            Console.WriteLine("Current board status:\n");
+            Console.WriteLine(" Pins:           Result:");
+
+            for (int i = 0; i < m_NumberOfGuesses; i++)
             {
-                if (character < 'A' || character > 'H')
+                Console.Write("|");
+
+                // Print current guess or empty row
+                if (i == i_NumberOfIteration)
                 {
-                    return false; // invalid character
+                    foreach (char character in WordFromUser)
+                    {
+                        Console.Write($" {character} ");
+                    }
+                    for (int j = WordFromUser.Length; j < 4; j++)
+                    {
+                        Console.Write("   ");
+                    }
+                }
+                else
+                {
+                    Console.Write("   ".PadRight(4 * 3));
                 }
 
-                int index = character - 'A';
-                countEachAppearance[index]++;
+                Console.Write("|    |");
 
-                if (countEachAppearance[index] > 1)
+                // Print result for current guess or empty
+                if (i == i_NumberOfIteration)
                 {
-                    return false; // duplicate character
+                    foreach (char character in Result)
+                    {
+                        Console.Write($" {character} ");
+                    }
+                    for (int j = Result.Length; j < 4; j++)
+                    {
+                        Console.Write("   ");
+                    }
                 }
+                else
+                {
+                    Console.Write("   ".PadRight(4 * 3));
+                }
+
+                Console.WriteLine("|");
+                Console.WriteLine("-----------------------------");
             }
 
-            return true;
+            Console.WriteLine("Please type your next guess (A B C D) or 'Q' to quit:");
         }
 
         public int GetGuessesNumber()
@@ -109,58 +110,9 @@ namespace Ex_02
             return numberOfGuesses;
         }
 
-        public void PrintResult(string i_Result, string i_WordFromUser, int i_NumberOfIteration)
+        public void invalidInput()
         {
-            Ex02.ConsoleUtils.Screen.Clear();
-
-            Console.WriteLine("Current board status:\n");
-            Console.WriteLine(" Pins:           Result:");
-
-            for (int i = 0; i < NumberOfGuesses; i++)
-            {
-                Console.Write("|");
-
-                // Print current guess or empty row
-                if (i == i_NumberOfIteration)
-                {
-                    foreach (char character in i_WordFromUser)
-                    {
-                        Console.Write($" {character} ");
-                    }
-                    for (int j = i_WordFromUser.Length; j < 4; j++)
-                    {
-                        Console.Write("   ");
-                    }
-                }
-                else
-                {
-                    Console.Write("   ".PadRight(4 * 3));
-                }
-
-                Console.Write("|    |");
-
-                // Print result for current guess or empty
-                if (i == i_NumberOfIteration)
-                {
-                    foreach (char character in i_Result)
-                    {
-                        Console.Write($" {character} ");
-                    }
-                    for (int j = i_Result.Length; j < 4; j++)
-                    {
-                        Console.Write("   ");
-                    }
-                }
-                else
-                {
-                    Console.Write("   ".PadRight(4 * 3));
-                }
-
-                Console.WriteLine("|");
-                Console.WriteLine("-----------------------------");
-            }
-
-            Console.WriteLine("Please type your next guess (A B C D) or 'Q' to quit:");
+            Console.WriteLine("Invalid input. Please enter a valid word.");
         }
     }
 }

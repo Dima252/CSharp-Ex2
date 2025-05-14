@@ -7,3 +7,12 @@ C:\Users\user\source\repos\CSharp-Ex2\Ex02 Shalev 322582008 Dima 322810060\Ex_02
 C:\Users\user\source\repos\CSharp-Ex2\Ex02 Shalev 322582008 Dima 322810060\Ex_02\obj\Debug\Ex_02.csproj.Up2Date
 C:\Users\user\source\repos\CSharp-Ex2\Ex02 Shalev 322582008 Dima 322810060\Ex_02\obj\Debug\Ex_02.exe
 C:\Users\user\source\repos\CSharp-Ex2\Ex02 Shalev 322582008 Dima 322810060\Ex_02\obj\Debug\Ex_02.pdb
+C:\Mac\Home\Documents\GitHub\CSharp-Ex2\Ex02 Shalev 322582008 Dima 322810060\Ex_02\bin\Debug\Ex_02.exe.config
+C:\Mac\Home\Documents\GitHub\CSharp-Ex2\Ex02 Shalev 322582008 Dima 322810060\Ex_02\bin\Debug\Ex_02.exe
+C:\Mac\Home\Documents\GitHub\CSharp-Ex2\Ex02 Shalev 322582008 Dima 322810060\Ex_02\bin\Debug\Ex_02.pdb
+C:\Mac\Home\Documents\GitHub\CSharp-Ex2\Ex02 Shalev 322582008 Dima 322810060\Ex_02\bin\Debug\Ex02.ConsoleUtils.dll
+C:\Mac\Home\Documents\GitHub\CSharp-Ex2\Ex02 Shalev 322582008 Dima 322810060\Ex_02\obj\Debug\Ex_02.csproj.AssemblyReference.cache
+C:\Mac\Home\Documents\GitHub\CSharp-Ex2\Ex02 Shalev 322582008 Dima 322810060\Ex_02\obj\Debug\Ex_02.csproj.CoreCompileInputs.cache
+C:\Mac\Home\Documents\GitHub\CSharp-Ex2\Ex02 Shalev 322582008 Dima 322810060\Ex_02\obj\Debug\Ex_02.csproj.Up2Date
+C:\Mac\Home\Documents\GitHub\CSharp-Ex2\Ex02 Shalev 322582008 Dima 322810060\Ex_02\obj\Debug\Ex_02.exe
+C:\Mac\Home\Documents\GitHub\CSharp-Ex2\Ex02 Shalev 322582008 Dima 322810060\Ex_02\obj\Debug\Ex_02.pdb

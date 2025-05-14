@@ -11,8 +11,7 @@ namespace Ex_02
     {
         public static void Main()
         {
-            UiManager uiManager = new UiManager();
-            uiManager.GameLoop();
+            Run game = new Run();
         }
     }
 }

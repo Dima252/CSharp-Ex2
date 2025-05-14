@@ -36,8 +36,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GameEngine.cs" />
+    <Compile Include="GeneratedGuess.cs" />
+    <Compile Include="Guess.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="Result.cs" />
+    <Compile Include="Run.cs" />
     <Compile Include="UiManager.cs" />
   </ItemGroup>
   <ItemGroup>
