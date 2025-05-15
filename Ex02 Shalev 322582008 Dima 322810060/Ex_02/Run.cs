@@ -25,9 +25,9 @@ namespace Ex_02
                 Result[] results = new Result[NumberOfGuesses];
                 GeneratedGuess generatedGuess = new GeneratedGuess();
 
-                bool printEmptyBoard = true, gameIsWon; // Flag to control printing the empty board
+                bool printEmptyBoard = true, gameIsWon = false, gameIsDone = false; // Flag to control printing the empty board
 
-                uiManager.PrintGame(results[0], guesses[0], 0, printEmptyBoard); // Print the initial empty board
+                uiManager.PrintGame(results, guesses,printEmptyBoard); // Print the initial empty board
                 printEmptyBoard = false; // Set the flag to false after the first print
 
                 for (int i = 0; i < NumberOfGuesses; i++)
@@ -44,12 +44,14 @@ namespace Ex_02
                     if (guesses[i].IsValidWord() == true)
                     {
                         results[i] = new Result(guesses[i], generatedGuess);
-                        uiManager.PrintGame(results[i], guesses[i], i, printEmptyBoard);
+                        uiManager.PrintGame(results, guesses, printEmptyBoard);
                         gameIsWon = results[i].GameIsWon();
-                        if (gameIsWon == true)
+                        if (gameIsWon == true || i == NumberOfGuesses - 1)
                         {
-                            
+                            gameIsDone = true;
+                            break;
                         }
+
                     }
                     else
                     {
@@ -59,10 +61,10 @@ namespace Ex_02
 
                 }
 
-            }
-
-            if(continueGame == true)
-            {
+                if (gameIsDone == true)
+                {
+                    continueGame = uiManager.gamIsDone(gameIsWon);
+                }
 
             }
 

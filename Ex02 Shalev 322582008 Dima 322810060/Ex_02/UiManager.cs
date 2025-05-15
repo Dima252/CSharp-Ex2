@@ -30,18 +30,8 @@ namespace Ex_02
             Console.WriteLine("Goodbye!");
         }
 
-        public void PrintGame(Result i_Result, Guess i_WordFromUser, int i_NumberOfIteration, bool i_printEmptyBoard)
+        public void PrintGame(Result[] i_Results, Guess[] i_UserGuesses, bool i_PrintEmptyBoard)
         {
-
-            string Result = "";
-            string WordFromUser = "";
-
-            if (i_printEmptyBoard != true)
-            {
-                Result = i_Result.ResultValue;
-                WordFromUser = i_WordFromUser.GuessValue;
-            }
-
             Ex02.ConsoleUtils.Screen.Clear();
 
             Console.WriteLine("Current board status:\n");
@@ -51,14 +41,16 @@ namespace Ex_02
             {
                 Console.Write("|");
 
-                // Print current guess or empty row
-                if (i == i_NumberOfIteration)
+                // Print guess for this row, if available and we're not printing an empty board
+                if (!i_PrintEmptyBoard && i < i_UserGuesses.Length && i_UserGuesses[i] != null)
                 {
-                    foreach (char character in WordFromUser)
+                    string guess = i_UserGuesses[i].GuessValue;
+                    foreach (char character in guess)
                     {
                         Console.Write($" {character} ");
                     }
-                    for (int j = WordFromUser.Length; j < 4; j++)
+
+                    for (int j = guess.Length; j < 4; j++)
                     {
                         Console.Write("   ");
                     }
@@ -70,14 +62,16 @@ namespace Ex_02
 
                 Console.Write("|    |");
 
-                // Print result for current guess or empty
-                if (i == i_NumberOfIteration)
+                // Print result for this row, if available and we're not printing an empty board
+                if (!i_PrintEmptyBoard && i < i_Results.Length && i_Results[i] != null)
                 {
-                    foreach (char character in Result)
+                    string result = i_Results[i].ResultValue;
+                    foreach (char character in result)
                     {
                         Console.Write($" {character} ");
                     }
-                    for (int j = Result.Length; j < 4; j++)
+
+                    for (int j = result.Length; j < 4; j++)
                     {
                         Console.Write("   ");
                     }
@@ -91,8 +85,9 @@ namespace Ex_02
                 Console.WriteLine("-----------------------------");
             }
 
-            Console.WriteLine("Please type your next guess (A B C D) or 'Q' to quit:");
+            Console.WriteLine("Please type your next guess (A B C D E F G H) or 'Q' to quit:");
         }
+
 
         public int GetGuessesNumber()
         {
@@ -114,5 +109,39 @@ namespace Ex_02
         {
             Console.WriteLine("Invalid input. Please enter a valid word.");
         }
+
+        public bool gamIsDone(bool gameIsWon)
+        {
+            if (gameIsWon)
+            {
+                Console.WriteLine("Congratulations! You won the game!");
+            }
+            else
+            {
+                Console.WriteLine("Game over. You lost!");
+            }
+
+            while (true)
+            {
+                Console.WriteLine("Press Enter to play again or 'q' to quit:");
+                string input = Console.ReadLine();
+
+                if (input == "")
+                {
+                    return true; // Player wants to continue playing
+                }
+                else if (input.ToLower() == "q")
+                {
+                    Console.WriteLine("Goodbye!");
+                    return false; // Player wants to quit
+                }
+                else
+                {
+                    Console.WriteLine("Invalid input. Please try again.");
+                }
+            }
+        }
+       
+
     }
 }
